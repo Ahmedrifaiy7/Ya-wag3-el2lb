@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign Up | Explore Horizons</title>
+    <link rel="stylesheet" href="/styles/logIn.css" />
+    <script src="/scripts/transition.js" defer></script>
+    <script src="/scripts/sign up.js" defer></script>
+  </head>
+  <body>
+    <!-- Overlay for background effects -->
+    <div class="overlay"></div>
+
+    <!-- Message Box for displaying notifications -->
+    <div id="messageBox" class="message-box" style="display: none"></div>
+
+    <!-- Main container for the signup page -->
+    <div class="container">
+      <!-- Left panel with branding and description -->
+      <div class="left-panel">
+        <h1>JOIN<br />THE JOURNEY</h1>
+        <p>
+          Create an account to start exploring a world of travel opportunities
+          and unforgettable memories.
+        </p>
+      </div>
+
+      <!-- Form panel for signup -->
+      <div class="form-panel">
+        <form id="signupForm" onsubmit="handleSignUp(event)">
+          <!-- Full Name Input -->
+          <label for="name" style="display: none">Full Name</label>
+          <input type="text" placeholder="Full Name" id="name" required />
+
+          <!-- Email Input -->
+          <label for="signup-email" style="display: none">Email</label>
+          <input
+            type="email"
+            placeholder="Enter your email"
+            id="signup-email"
+            required
+          />
+
+          <!-- Password Input with toggle visibility -->
+          <div class="password-wrapper">
+            <label for="signup-password" style="display: none">Password</label>
+            <input
+              type="password"
+              placeholder="Password"
+              id="signup-password"
+              required
+            />
+            <span
+              class="toggle-password"
+              onclick="togglePassword('signup-password', this)"
+              >👁️</span
+            >
+          </div>
+
+          <!-- Confirm Password Input with toggle visibility -->
+          <div class="password-wrapper">
+            <label for="confirm-password" style="display: none"
+              >Confirm Password</label
+            >
+            <input
+              type="password"
+              placeholder="Confirm Password"
+              id="confirm-password"
+              required
+            />
+            <span
+              class="toggle-password"
+              onclick="togglePassword('confirm-password', this)"
+              >👁️</span
+            >
+          </div>
+
+          <!-- Signup Button -->
+          <button type="submit">SIGN UP</button>
+
+          <!-- Divider for alternative signup options -->
+          <div class="or">or</div>
+
+          <!-- Google Signup Button -->
+          <div class="google-signin" onclick="signUpWithGoogle()">
+            <img src="/img/google.png" alt="Google logo" />
+            Sign up with Google
+          </div>
+
+          <!-- Link to Sign In Page -->
+          <div class="signup-link">
+            Already have an account?
+            <a href="javascript:void(0);" onclick="goTo('signin.html')"
+              >Sign In</a
+            >
+          </div>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>

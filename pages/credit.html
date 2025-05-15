@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Credit - Travel Agency</title>
+    <link rel="stylesheet" href="/styles/credit.css">
+</head>
+<body>
+
+    <header>
+        <!-- <div class="top-bar">
+                <span>📍 123 Street, New York, USA</span>
+                <span>📞 +012 345 6789</span>
+                <span>📧 info@example.com</span>
+                <div class="social-icons">
+                        <a href="#">🌐</a>
+                        <a href="#">🔗</a>
+                        <a href="#">📸</a>
+                </div>
+        </div> -->
+        <nav class="navbar">
+            <div class="logo"> Travel</div>
+            <ul class="nav-links">
+                <li><a class="active" href="/pages/home.html">Home</a></li>
+                <li><a href="/pages/about.html">About</a></li>
+                <li><a href="/pages/serviceRefined.html">Services</a></li>
+                <li><a href="/pages/package-details.html">Packages</a></li>
+                <li><a href="#">Pages</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="/pages/profile.html">Profile</a></li>
+                <li><a href="/pages/credit.html">Credit</a></li>
+            </ul>
+            <button class="register-btn">Register</button>
+            <div class="hamburger">&#9776;</div>
+        </nav>
+        
+</header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Enjoy Your Vacation With Us</h1>
+            <p>Tempor erat elitr reburn at clita diam amet diam et eos erat ipsum lorem sit</p>
+            <!-- <div class="search-box">
+                <input type="text" placeholder="Eg: Thailand">
+                <button>Search</button>
+            </div> -->
+        </div>
+    </section>
+
+    <!-- Body Start -->
+    <main>
+        <section class="Credit">
+          <div class="credit-box">
+            <div class="Credit-content">
+              <h1>Credit Information</h1>
+              <p class="one">Enter your credit card Information</p>
+              <p class="two">Tourist accepts all major credit and debit cards:</p>
+      
+              <form class="credit-form">
+                <label>
+                  <input type="checkbox" name="card-type" value="visa">
+                  <span>Use name on account</span>
+                </label>
+      
+                <input type="text" placeholder="Name on Card" required>
+                <input type="text" placeholder="Card Number" required>
+      
+                <p class="expire-label">Expiration date</p>
+                <div class="expire-row">
+                  <input type="text" placeholder="MM/YY" required>
+                  <input type="text" placeholder="CVV" required>
+                </div>
+      
+                <button type="submit">Add your card</button>
+              </form>
+            </div>
+          </div>
+        </section>
+      </main>
+     
+      
+
+      <footer style="background-color: #222; color: white; padding: 40px 20px;">
+        <div style="display: flex; flex-wrap: wrap; gap: 30px; justify-content: space-between; max-width: 1200px; margin: auto;">
+            
+            <!-- Company Info -->
+            <div>
+                <h3>Company</h3>
+                <ul style="list-style: none; padding: 0;">
+                    <li style="margin: 10px 0;"><a href="#" style=" text-decoration: none ; color: white;">&gt; About Us</a></li>
+                    <li style="margin: 10px 0;"><a href="#" style=" text-decoration: none ; color: white;">&gt; Contact Us</a></li>
+                    <li style="margin: 10px 0;"><a href="#" style=" text-decoration: none ; color: white;">&gt; Privacy Policy</a></li>
+                    <li style="margin: 10px 0;"><a href="#" style=" text-decoration: none ; color: white;">&gt; Terms & Conditions</a></li>
+                    <li style="margin: 10px 0;"><a href="#" style=" text-decoration: none ; color: white;">&gt; FAQs & Help</a></li>
+                </ul>
+            </div>
+    
+            <!-- Contact Info -->
+            <div style="margin: 10px 0;">
+                <h3>Contact</h3>
+                <ul style="list-style: none; padding: 0;"></ul>
+                        <li style="margin: 10px 0;">📍 123 Street, New York, USA</li>
+                        <li style="margin: 10px 0;">📞 +012 345 67890</li>
+                        <li style="margin: 10px 0;">✉️ info@example.com</li>
+                </ul>
+            </div>
+    
+            <!-- Newsletter -->
+            <div class="k" style="padding: 20px 10px;">
+                <h3>Newsletter</h3>
+                <p style="margin-bottom: 15px; color: azure;">Subscribe to our newsletter for updates.</p>
+                <input type="email" placeholder="Your email" style="padding: 10px; width: 200px; margin-bottom: 10px; display: block;">
+                <button class="sign" style="padding: 10px; background-color: green; color: white; border: none; cursor: pointer; ">Sign Up</button>
+            </div>
+        </div>
+    
+        <hr style="margin: 30px 0; border-color: #444;">
+    
+        <div style="text-align: center;">
+            <p>&copy; 2025 Tourist. All rights reserved.</p>
+        </div>
+    </footer>
+  
+  
+  <script>
+    const hamburger = document.querySelector('.hamburger');
+    const navLinks = document.querySelector('.nav-links');
+  
+    hamburger.addEventListener('click', () => {
+      navLinks.classList.toggle('show');
+    });
+  </script>
+  
+
+</body>
+</html>

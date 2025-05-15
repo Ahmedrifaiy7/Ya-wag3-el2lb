@@ -1,0 +1,268 @@
+/* Reset and Base Styles */
+/* Reset and Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  line-height: 1.6; /* This sets the vertical spacing between lines of text. */
+  background-color: #f5f5f5;
+}
+
+/* Top Bar */
+.top-bar {
+  background-color: #111;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap; /* This allows the items to wrap onto the next line if necessary when the width decrease */
+  font-size: 14px;
+  align-items: center;
+  color: white;
+}
+
+.social-icons a {
+  margin-left: 10px;
+  color: white;
+  text-decoration: none;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  background-color: #000;
+  position: relative;
+  transition: background-color 0.3s ease;
+}
+
+.logo {
+  font-size: 24px;
+  color: #03a791;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  transition: all 0.3s ease;
+}
+
+.nav-links li a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.nav-links li a:hover {
+  color: #03a791;
+}
+
+.nav-links li a.active {
+  color: white; /* This sets the color of the active link */
+  /* position: relative; */
+}
+
+.nav-links li a.active:hover {
+  color: #03a791;
+}
+
+.register-btn {
+  background-color: #03a791;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 20px;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.register-btn:hover {
+  background-color: #036753;
+}
+
+.hamburger {
+  display: none;
+  font-size: 28px;
+  cursor: pointer;
+  color: #fff;
+}
+
+/* Hero Section */
+.hero {
+  background: url('beach.avif') no-repeat center center/cover;
+  height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 0 20px;
+}
+
+.hero-content {
+  max-width: 700px;
+}
+
+.hero-content h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  color: white;
+}
+
+.hero-content p {
+  margin: 20px 0;
+  font-size: 1.1rem;
+  color: white;
+}
+
+/* .search-box {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.search-box input {
+  padding: 10px;
+  width: 60%;
+  border-radius: 25px 0 0 25px;
+  border: none;
+  outline: none;
+  font-size: 16px;
+}
+
+.search-box button {
+  padding: 10px 20px;
+  background-color: #8ee000;
+  border: none;
+  border-radius: 0 25px 25px 0; 
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+} */
+
+/* Credit Card Section */
+.Credit {
+  padding: 60px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.credit-box {
+  background: #fff;
+  padding: 40px;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15); /* Shadow effect */
+  max-width: 400px;
+  width: 100%;
+}
+
+.Credit-content h1 {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #000;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.Credit-content .one,
+.Credit-content .two {
+  text-align: center;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.credit-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.credit-form label {
+  font-weight: bold;
+  font-size: 0.95rem;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #000;
+}
+
+.credit-form input[type="text"] {
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 0.95rem;
+  width: 100%;
+}
+
+.expire-label {
+  font-weight: bold;
+  margin-top: 10px;
+  color: #000;
+}
+
+.expire-row {
+  display: flex;
+  gap: 10px;
+}
+
+.expire-row input {
+  flex: 1;
+  background-color: #e0e0e0;
+}
+
+.credit-form button {
+  background-color: #FFD700;
+  border: none;
+  padding: 12px;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 25px;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: background-color 0.3s;
+}
+
+.credit-form button:hover {
+  background-color: #e5c200;
+}
+
+
+
+/* Responsive Navigation */
+@media (max-width: 768px) {
+  .nav-links {
+    flex-direction: column;
+    background-color: #000;
+    width: 100%;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    display: none;
+    padding: 10px 0;
+  }
+
+  .nav-links li {
+    text-align: center;
+    padding: 10px 0;
+  }
+
+  .nav-links.show {
+    display: flex;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  .register-btn {
+    display: none;
+  }
+}

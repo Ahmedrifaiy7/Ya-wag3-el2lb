@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login | Explore Horizons</title>
+    <link rel="stylesheet" href="/styles/logIn.css" />
+    <script src="/scripts/transition.js" defer></script>
+    <script src="/scripts/sign in.js" defer></script>
+  </head>
+  <body>
+    <!-- Overlay for background effects -->
+    <div class="overlay"></div>
+
+    <!-- Message Box for displaying notifications -->
+    <div id="messageBox" class="message-box" style="display: none"></div>
+
+    <!-- Main container -->
+    <div class="container">
+      <!-- Left panel with branding and description -->
+      <div class="left-panel">
+        <h1>EXPLORE<br />HORIZONS</h1>
+        <p>
+          Where Your Dream Destinations Become Reality.<br />Embark on a journey
+          where every corner of the world is within your reach.
+        </p>
+      </div>
+
+      <!-- Form panel for login -->
+      <div class="form-panel">
+        <form id="loginForm" onsubmit="handleLogin(event)">
+          <!-- Email input -->
+          <label for="email" style="display: none">Email</label>
+          <input
+            type="email"
+            placeholder="Enter your email"
+            id="email"
+            required
+          />
+
+          <!-- Password input with toggle visibility -->
+          <div class="password-wrapper">
+            <label for="password" style="display: none">Password</label>
+            <input
+              type="password"
+              placeholder="Password"
+              id="password"
+              required
+            />
+            <span
+              class="toggle-password"
+              onclick="togglePassword('password', this)"
+              >👁️</span
+            >
+          </div>
+
+          <!-- Forgot password link -->
+          <a href="#" class="forgetPass">Forgot password?</a>
+
+          <!-- Sign-in button -->
+          <button type="submit">SIGN IN</button>
+
+          <!-- Divider for alternative sign-in options -->
+          <div class="or">or</div>
+
+          <!-- Google sign-in button -->
+          <div class="google-signin" onclick="signInWithGoogle()">
+            <img src="/img/google.png" alt="Google logo" />
+            Sign in with Google
+          </div>
+
+          <!-- Link to sign-up page -->
+          <div class="signup-link">
+            Are you new?
+            <a href="javascript:void(0);" onclick="goTo('signup.html')"
+              >Create an Account</a
+            >
+          </div>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
